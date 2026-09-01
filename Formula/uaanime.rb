@@ -5,20 +5,20 @@
 class Uaanime < Formula
   desc "Дивись аніме українською з термінала"
   homepage "https://github.com/Basmanjacks/uaanime"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.2.0/uaanime_darwin_amd64.tar.gz"
-      sha256 "789b7bbb4876e097177799a46d537cabcec9759e0faae52b4f50dc70931da771"
+      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.2.1/uaanime_darwin_amd64.tar.gz"
+      sha256 "7f05dc204a89c48da3160af999fd76e8043c5cf91df3cd4c91333685c305718e"
 
       define_method(:install) do
         bin.install "uaanime"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.2.0/uaanime_darwin_arm64.tar.gz"
-      sha256 "ff70d269170822cdfd0fa09a247d26ee0553d6bf2dc6d049918ff00cfb8d1f61"
+      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.2.1/uaanime_darwin_arm64.tar.gz"
+      sha256 "12e3d0d53a6457ae0f478de1f81b00c94d82bf463309c10e499a9958b8806a94"
 
       define_method(:install) do
         bin.install "uaanime"
@@ -28,18 +28,26 @@ class Uaanime < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.2.0/uaanime_linux_amd64.tar.gz"
-      sha256 "3bb894dfa5d3805d1a6bbe72ad2462358dd8f06380277e75b74de25382d19dbc"
+      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.2.1/uaanime_linux_amd64.tar.gz"
+      sha256 "0aa3fa38e6b56858b114612f126fcf8f21e98c4ae43801c4bdea762560b6b354"
       define_method(:install) do
         bin.install "uaanime"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.2.0/uaanime_linux_arm64.tar.gz"
-      sha256 "13c442068872f4eddf595935f8fd28919c88d2fcde5252eb43d4cf87d8130359"
+      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.2.1/uaanime_linux_arm64.tar.gz"
+      sha256 "38bcac610936e67d226acec02d90bdfb5b86739a6efe3481ba566a0839ac9455"
       define_method(:install) do
         bin.install "uaanime"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      Для відтворення потрібен VLC або mpv.
+      Встанови один із них пакетним менеджером системи.
+      Перевірка: uaanime doctor
+    EOS
   end
 end
