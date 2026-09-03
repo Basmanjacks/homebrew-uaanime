@@ -5,20 +5,20 @@
 class Uaanime < Formula
   desc "Дивись аніме українською з термінала"
   homepage "https://github.com/Basmanjacks/uaanime"
-  version "0.3.0"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.3.0/uaanime_darwin_amd64.tar.gz"
-      sha256 "3896aefe22f6d7cfc327f9f871b326a842a679d47feda207dae8e4902344de12"
+      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.4.0/uaanime_darwin_amd64.tar.gz"
+      sha256 "0ee76b638ac115bd557168eaab183b47fa39116e60c47e46bd104ded17a71659"
 
       define_method(:install) do
         bin.install "uaanime"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.3.0/uaanime_darwin_arm64.tar.gz"
-      sha256 "00d91491aa9c250376c3c0add61dafedb636fb9619bc2ea4396a0b6cf27aed56"
+      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.4.0/uaanime_darwin_arm64.tar.gz"
+      sha256 "59bb2ac7bfb4788d2a9f43e22c5a425abf2fc9d8153149bbc653b60fb3e6743f"
 
       define_method(:install) do
         bin.install "uaanime"
@@ -28,15 +28,15 @@ class Uaanime < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.3.0/uaanime_linux_amd64.tar.gz"
-      sha256 "e39987891e1b1b1e516c013af6716e6a7d32d88247e36457a54ccd2aebd4ced7"
+      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.4.0/uaanime_linux_amd64.tar.gz"
+      sha256 "9e4a0c5569e1d9121bfb54488f7578670998ad19c2110e29eaade912115878a0"
       define_method(:install) do
         bin.install "uaanime"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.3.0/uaanime_linux_arm64.tar.gz"
-      sha256 "812389251290d9f5c763b4bbb2dd96f0fa8dcd5c996b5b075dfbce67e86209f0"
+      url "https://github.com/Basmanjacks/uaanime/releases/download/v0.4.0/uaanime_linux_arm64.tar.gz"
+      sha256 "90f8490e14d450527a3640599014110fa9591434fe6a241965e1ec796687a6f9"
       define_method(:install) do
         bin.install "uaanime"
       end
