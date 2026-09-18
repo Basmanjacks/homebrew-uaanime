@@ -10,25 +10,25 @@ cask "uaanime" do
     end
   end
 
-  version "0.6.1"
+  version "0.6.2"
 
   on_macos do
     on_arm do
-      sha256 "5df36128f95469e3560f1670844325a6b71d9ebc638a4a1d7283bf0d4f899758"
+      sha256 "b72ab14453cda58d5970e26f724296283cee727e055ebef9e0ba17cd68b326ac"
       url "https://github.com/Basmanjacks/uaanime/releases/download/v#{version}/uaanime_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "54c24555eced9444c24aefeb54122dc1607766948e431c11d13851cb057ede31"
+      sha256 "7cad9fb68df9cb20499e498a042542981c5a1db494c3eb51985347890948517b"
       url "https://github.com/Basmanjacks/uaanime/releases/download/v#{version}/uaanime_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "aa87a039ae84be4b1a90858fba9b6a56c8c7868bdb1e00925b9db89ddc8b087a"
+      sha256 "3a42feee8650ec7b4b7a53e1a029e7720339c29a18d1fd6a99854a007030841d"
       url "https://github.com/Basmanjacks/uaanime/releases/download/v#{version}/uaanime_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "43938b1a0bd9febc5c89011b9ed2c927c71028e8da1c21164157937760b6b8a5"
+      sha256 "cbbe399538f5583d6c8e52a24645413d071ec3a64914fdfe2f01eba11b2f82da"
       url "https://github.com/Basmanjacks/uaanime/releases/download/v#{version}/uaanime_linux_amd64.tar.gz"
     end
   end
